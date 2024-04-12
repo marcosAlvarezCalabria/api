@@ -6,17 +6,17 @@ const postSchema = new Schema(
 {
     title: {
         type: String,
-        require: 'Title is required',
+        required: 'Title is required',
         minLength: [5, 'Title needs at least 5 characters']
     },
     text: {
         type: String,
-        require: 'Text is required',
+        required: 'Text is required',
         minLength: [5, 'Text needs at least 5 characters']
     },
     author: {
         type:String,
-        require: 'Author is required'
+        required: 'Author is required'
     }
 
 
