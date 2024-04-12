@@ -62,6 +62,17 @@ module.exports.update = (req, res, next) => {
            
         })
 }
+module.exports.delete = (req, res, next) => {
+    Post.findByIdAndDelete(req.params.id)
+        .then((post) =>{
+            if (post) {
+                res.status(204).send()
+            } else {
+                res.status(404).json({message: "Post not found"})
+            }
+        })
+        .catch((error)=> next(error));
+}
 
 
 //*1 findByIdAndUdate no valida por defecto entonces hacemos runVidators true para que si lo haga 
