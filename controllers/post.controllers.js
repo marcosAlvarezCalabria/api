@@ -1,4 +1,4 @@
-const { post } = require('../configs/routes.config');
+
 const Post = require('../models/post.model');
 const mongoose = require('mongoose');
  
